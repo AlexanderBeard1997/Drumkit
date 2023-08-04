@@ -10,12 +10,12 @@ document.addEventListener('keyup', (event) => { // adds key up event listner to 
 
     if (drumPad) { // looks if the drumpad variable is true if it is simulates a click on that pad
         drumPad.click();
-    } 
+    }
 });
 
 function playSound(key) { // function to play sound using key
     const audio = document.querySelector(`audio[data-key="${key}`); //looks for audio element with data key equal to the key
-    
+
     if (!audio) return; // checks that audio is not false if it is the function is ended
     audio.currentTime = 0; // causes audio to play from beginning
     audio.play();  //plays the selected audio
